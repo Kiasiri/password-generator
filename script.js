@@ -1,9 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowerCase = 'abcdefghijklmnopqrstuvwxyz0123456789 '.split(
+var lowerCase = 'abcdefghijklmnopqrstuvwxyz'.split(
   '');
 var uperCase = "QWERTYUIOPLKJHGFDSAZXCVBNM".split("");
 var numbers = "1234567890".split("");
+var passwordLength = ""
 
 //Get random Characters code
 function getRandomLowerCase() {
@@ -19,6 +20,7 @@ function getRandomUperCase() {
 console.log(getRandomLowerCase());
 console.log(getRandomUperCase());
 console.log(getRandomNumber());
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -26,6 +28,13 @@ function writePassword() {
 
   passwordText.value = password;
 
+}
+function generatePassword() {
+  var passwordLength = prompt (
+"How long do you want you password to be ?"
+  )
+  
+console.log(passwordLength)
 }
 
 // Add event listener to generate button
