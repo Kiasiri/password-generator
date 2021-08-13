@@ -19,10 +19,6 @@ function getRandomUperCase() {
     return uperCase[Math.floor(Math.random() * uperCase.length)]
 };
 
-console.log(getRandomLowerCase());
-console.log(getRandomUperCase());
-console.log(getRandomNumber());
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -35,20 +31,25 @@ function generatePassword() {
   var passwordLength = prompt (
 "How long do you want you password to be ?"
   );
+  var passNum = Number(passwordLength, 10)
+  console.log(typeof passwordLength)
+  console.log(passNum)
+  console.log(typeof passNum)
   var askUper = confirm("Do you want uppercase letters in your password?")
   var askNumber = confirm("Do you want numbers in your password?")
   var askLower = confirm("Do you want lowercase letters in your password?")
+   
+  for (var i = 0; i < passNum; i++) { 
+    console.log("My password " + [i] + ".");}
 
+  if (askUper === true) {console.log(getRandomUperCase())
+} else console.log("No Upper case");
 
-  if (askUper === true) {console.log(askUper)
-} else console.log("It works");
+if (askLower === true) {console.log(getRandomLowerCase())
+} else {console.log("No lower case");};
 
-if (askLower === true) {console.log(askLower)
-} else {console.log("It works");};
-
-if (askNumber === true) {console.log(askNumber)}
-else console.log("It works");
-
+if (askNumber === true) {console.log(getRandomNumber())}
+else console.log("No Numbers");
 
 }
 
