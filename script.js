@@ -1,7 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowerCase = 'abcdefghijklmnopqrstuvwxyz'.split(
-  '');
+var lowerCase = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var uperCase = "QWERTYUIOPLKJHGFDSAZXCVBNM".split("");
 var numbers = "1234567890".split("");
 var passwordLength = ""
@@ -36,13 +35,21 @@ function generatePassword() {
   var passwordLength = prompt (
 "How long do you want you password to be ?"
   );
-  var askUper = confirm("Do you want uppercase lettersin your password?")
-  var askNumber = confirm("Do you want numbers password?")
-  var askLower = confirm("Do you want lowercase letters in you password?")
-console.log(passwordLength)
-console.log(askUper)
-console.log(askNumber)
-console.log(askLower)
+  var askUper = confirm("Do you want uppercase letters in your password?")
+  var askNumber = confirm("Do you want numbers in your password?")
+  var askLower = confirm("Do you want lowercase letters in your password?")
+
+
+  if (askUper === true) {console.log(askUper)
+} else console.log("It works");
+
+if (askLower === true) {console.log(askLower)
+} else {console.log("It works");};
+
+if (askNumber === true) {console.log(askNumber)}
+else console.log("It works");
+
+
 }
 
 // Add event listener to generate button
