@@ -23,7 +23,7 @@ function generatePassword() {
   );
   var passNum = Number(passwordLength, 10);
   if (passNum > 128 || passNum < 8) {
-    alert("Please pick a length between 8 and 128");
+    alert("Please try again and pick a length between 8 and 128.");
   } else {
     var askUper = confirm("Do you want uppercase letters in your password?");
     var askNumber = confirm("Do you want numbers in your password?");
